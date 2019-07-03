@@ -3,32 +3,17 @@ layout: default
 ---
 
 <div class="home">
-  <div class="top card">
-    <a class="email" href="#">{{site.email}}</a>
-    {% include user_detail.html %}
-    
-  </div>
-  <div class="posts card">
-    <div class="card-content white-text">
-      <span class="card-title">Posts</span>
-
-      <ul class="post-list">
-        {% for post in site.posts %}
-          <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>            
-          </li>
-        {% endfor %}
-      </ul>
-
-      <br>
-      <p class="description">{{ site.description }}</p>
-      <div class="center">
-        <a href="about" class="btn">Read More</a>
-      </div>
-      
-      <hr>
-      {% include social_link.html %}
+  <div class="center">
+      <h4>{{ site.data.data.sidebar.name }}</h4>
+      <hr width="10%">
+      <p>
+        {{site.user_description}}
+      </p>
     </div>
-  </div>
+
+  <div class="center">
+    <a href="/resume" class="btn">Read More</a>
+  </div>  
+  <hr>
+  {% include social_link.html %}
 </div>

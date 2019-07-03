@@ -1,0 +1,117 @@
+---
+layout: resume
+---
+
+<div class="wrapper">
+
+  <div class="sidebar-wrapper">
+    {% assign sidebar = site.data.data.sidebar %}
+    <div class="profile-container">
+      <img class="profile rounded-circle img-fluid" src="https://avatars.githubusercontent.com/jemang" alt="" />
+      <!-- <img class="profile" src="assets/images/{{ sidebar.avatar }}" alt="" /> -->
+      <h1 class="name">{{ sidebar.name }}</h1>
+      <h3 class="tagline">{{ sidebar.tagline }}</h3>
+    </div><!--//profile-container-->
+    
+    <div class="contact-container container-block">
+      <ul class="list-unstyled contact-list">
+        <li class="email"><i class="fas fa-envelope"></i><a href="mailto: {{ sidebar.email }}">{{ sidebar.email }}</a></li>
+        <li class="phone"><i class="fas fa-phone"></i><a href="tel:{{ sidebar.phone }}">Contact Now</a></li>
+        <li class="website"><i class="fas fa-globe"></i><a href="https://{{ sidebar.website }}" target="_blank">{{ sidebar.website }}</a></li>
+        <li class="linkedin"><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/{{ sidebar.linkedin }}" target="_blank">{{ sidebar.linkedin }}</a></li>
+        <li class="github"><i class="fab fa-github"></i><a href="https://{{ sidebar.github }}" target="_blank">{{ sidebar.github }}</a></li>
+      </ul>
+    </div><!--//contact-container-->
+
+    {% assign education = site.data.data.education %}
+    <div class="education-container container-block">
+      <h2 class="container-block-title"> Education </h2>
+
+      {% for graduation in education %}
+      <div class="item">
+        <h4 class="degree">{{ graduation.degree }}</h4>
+        <h5 class="meta">{{ graduation.university }}</h5>
+        <div class="time">{{ graduation.time }}</div>
+      </div><!--//item-->
+      {% endfor %}
+    </div><!--//education-container-->
+      
+    {% assign languages = site.data.data.sidebar.languages %}
+    <div class="languages-container container-block">
+      <h2 class="container-block-title"> Languages </h2>
+      <ul class="list-unstyled interests-list">
+        {% for language in languages %}
+        <li>
+          {{ language.idiom }}
+          <span class="lang-desc">({{ language.level }})</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div><!--//languages-->  
+    
+    {% assign interests = site.data.data.sidebar.interests %}
+    <div class="interests-container container-block">
+      <h2 class="container-block-title"> Interests </h2> 
+      <ul class="list-unstyled interests-list">
+        {% for interest in interests %}   
+        <li>{{ interest.item }}</li>
+        {% endfor %}
+      </ul>
+    </div><!--//interests-->
+  </div><!--//sidebar-wrapper-->
+    
+  <div class="main-wrapper">
+    
+    {% assign career = site.data.data.career-profile %}
+    <section class="section summary-section">
+      <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>{{ career.title }}</h2>
+      <div class="summary">
+        <p>{{ career.summary }}</p>
+      </div><!--//summary-->
+    </section><!--//section-->
+
+    {% assign experiences = site.data.data.experiences %}
+    <section class="section experiences-section">
+      <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>Experiences</h2>
+      
+      {% for exp in experiences %}
+      <div class="item">
+        <div class="meta">
+          <div class="upper-row">
+            <h3 class="job-title">{{ exp.role }}</h3>
+            <div class="time">{{ exp.time }}</div>
+          </div><!--//upper-row-->
+          <div class="company">{{ exp.company }}</div>
+        </div><!--//meta-->
+        <div class="details">
+          <p>{{ exp.details | markdownify }}</p>  
+        </div><!--//details-->
+      </div><!--//item-->
+      {% endfor %}
+    </section><!--//section-->
+      
+    {% assign achievement = site.data.data.achievement %}
+    <section class="section projects-section">
+      <h2 class="section-title"><span class="icon-holder"><i class="fas fa-archive"></i></span>Achievement</h2>
+      <div class="intro">
+        <p>{{ achievement.details | markdownify }}</p>
+    </section>
+      
+    {% assign skills = site.data.data.skills %}
+    <section class="skills-section section">
+      <h2 class="section-title"><span class="icon-holder"><i class="fas fa-rocket"></i></span>{{ skills.title }}</h2>
+
+      {% for skill in skills.toolset %}
+      <div class="skillset">        
+        <div class="item">
+          <h3 class="level-title">{{ skill.name }}</h3>
+          <div class="progress level-bar">
+            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: {{ skill.level}}" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>                               
+        </div><!--//item-->
+      </div>
+      {% endfor %}
+    </section><!--//skills-section-->
+      
+  </div><!--//main-body-->
+</div>

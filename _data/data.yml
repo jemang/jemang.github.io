@@ -1,0 +1,89 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+    about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
+    education: True # set to False if you want education in main section instead of in sidebar
+
+    # Profile information
+    name: Muhamad Azman
+    tagline: Full Stack Developer
+    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+
+    # Sidebar links
+    email: azman.cs251@gmail.com
+    phone: 0145143298
+    website: jemang.github.io #do not add http://
+    linkedin: muhamad-azman
+    github: github.com/jemang
+
+    languages:
+      - idiom: Malay
+        level: Native
+
+      - idiom: English
+        level: intermediate
+
+    interests:
+      - item: Badminton
+        link:
+      - item: Hiking
+        link:
+
+career-profile:
+    title: Career Profile
+    summary: |
+      Experienced development of applications who is enthusiastic about writing clean, 
+      efficient, and accessible code in a functional framework. Committed to the total
+      development lifecycle, the maintenance of code quality and bug-free applications 
+      is of the utmost importance.
+
+education:
+    - degree: BACHELOR OF COMPUTER SCIENCE (HONS) NETCENTRIC COMPUTING
+      university: Universiti Teknologi Mara Kampus Jasin
+      time: 2015 - 2017
+
+    - degree: DIPLOMA COMPUTER SCIENCE
+      university: Universiti Teknologi Mara Kampus Machang
+      time: 2012 - 2015
+
+experiences:
+    - role: Fullstack Developer
+      time: September 2017 – present
+      company: Localhost Sdn Bhd
+      details: |
+        - Developing and maintaining a web system for managing a DNS’ Security
+        - Developing and maintaining eProcurement system
+        - Developing and maintaining NOC system
+        - Help with user testing and debugging
+
+    - role: Internship
+      time: Mac 2017 – September 2017
+      company: Localhost Sdn Bhd
+      details: |
+        - Build the eProcurement system
+        - Build the system for Network Operations Center (NOC)
+        - Help in user testing and debugging
+
+achievement:
+    details: |
+      - Participate as mentor bootcamp 2016 at MRSM TUMPAT
+      - Participate in Students Innovation, Invention & Design Competition (SIIDCOM 2014)
+
+skills:
+    title: Skills &amp; Proficiency
+
+    toolset:
+      - name: Ruby on Rails
+        level: 80%
+      - name: Javascript
+        level: 37%
+      - name: jQuery
+        level: 58%
+      - name: HTML5 & CSS
+        level: 90% 
+      - name: PHP
+        level: 40%
+      - name: Bootstrap
+        level: 70%

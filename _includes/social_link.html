@@ -1,8 +1,9 @@
+{% assign sidebar = site.data.data.sidebar %}
 <div class="rss-subscribe">
-    <a class="link" rel="tooltip" data-title="https://www.linkedin.com/in/{{ site.linkedin_username }}" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" >
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a class="link" rel="tooltip" data-title="https://github.com/{{ site.github_username }}" href="https://github.com/{{ site.github_username }}" target="_blank" >
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
+  <a class="link" rel="tooltip" data-title="https://www.linkedin.com/in/{{ sidebar.linkedin }}" href="https://www.linkedin.com/in/{{ sidebar.linkedin }}" target="_blank" >
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a class="link" rel="tooltip" data-title="https://{{ sidebar.github }}" href="https://{{ sidebar.github }}" target="_blank" >
+    <i class="fab fa-github"></i>
+  </a>
+</div>
