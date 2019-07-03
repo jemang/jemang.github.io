@@ -10,7 +10,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #545E6C;
-  /* background: #3A525D; */
+  background: #3A525D;
   font-size: 14px;
   background-image: url('../images/chip.jpg');
   -webkit-background-size: cover;
