@@ -12,7 +12,7 @@ sidebar:
   avatar: https://avatars.githubusercontent.com/jemang
 
   # Sidebar links
-  email: azman.cs251@gmail.com
+  email: azman@jemang.my
   phone: ""
   website: jemang.github.io #do not add http://
   linkedin: muhamad-azman
@@ -76,7 +76,7 @@ skills:
 
   toolset:
     - name: Ruby on Rails
-      level: 80%
+      level: 90%
     - name: Javascript
       level: 37%
     - name: jQuery
